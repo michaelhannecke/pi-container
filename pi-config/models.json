@@ -6,7 +6,7 @@
       "apiKey": "not-required",
       "models": [
         {
-          "id": "/Users/michael/models/gemma-4-26b-a4b-it-4bit",
+          "id": "/models/gemma-4-26b-a4b-it-4bit",
           "name": "mlx-local/gemma4-instruct"
         }
       ]

@@ -3,6 +3,8 @@
 pi-config/sessions/
 pi-config/cache/
 pi-config/logs/
+# pi may write provider credentials into auth.json at runtime — keep it local.
+pi-config/auth.json
 
 # macOS cruft
 .DS_Store

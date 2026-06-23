@@ -16,6 +16,7 @@
   <img src="https://img.shields.io/badge/agent-pi--coding--agent%20%C2%B7%20Node%2022-339933" alt="agent">
   <img src="https://img.shields.io/badge/model-gemma--4--26b%20%C2%B7%20MLX--Swift-orange" alt="model">
   <img src="https://img.shields.io/badge/status-hands--on%20draft-yellow" alt="status">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="license">
 </p>
 
 ---
@@ -122,7 +123,7 @@ PROJECT_DIR=~/projects/your-repo ./scripts/run.sh --model mlx-local/gemma4-instr
 
 ### Models & provider — `pi-config/models.json`
 
-Defines the `mlx-local` provider with `api: "openai-completions"` and a nested `models` array. `apiKey` is `"not-required"` (a local server needs no secret, so none can leak). Each model's `id` must be **exactly** what the server's `/v1/models` reports — here the full model path `/Users/michael/models/gemma-4-26b-a4b-it-4bit` — while `name` (`mlx-local/gemma4-instruct`) is the handle `--model` matches against. `contextWindow`/`maxTokens` are optional; omitted here, so pi's defaults (128K / 16.4K) apply — set them to your server's real limits.
+Defines the `mlx-local` provider with `api: "openai-completions"` and a nested `models` array. `apiKey` is `"not-required"` (a local server needs no secret, so none can leak). Each model's `id` must be **exactly** what the server's `/v1/models` reports — here the full model path `/models/gemma-4-26b-a4b-it-4bit` (replace with the absolute path your host server actually returns) — while `name` (`mlx-local/gemma4-instruct`) is the handle `--model` matches against. `contextWindow`/`maxTokens` are optional; omitted here, so pi's defaults (128K / 16.4K) apply — set them to your server's real limits.
 
 ### Global agent rules — `pi-config/AGENTS.md`
 
@@ -157,4 +158,4 @@ The code blocks in the article mirror the `Containerfile`, `pi-config/`, and `sc
 
 ## License
 
-No license specified. The contents and code in this repository are **draft material**.
+Licensed under the MIT License — see [`LICENSE`](LICENSE).
